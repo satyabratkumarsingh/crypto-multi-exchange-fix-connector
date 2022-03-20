@@ -1,0 +1,11 @@
+exchanges:
+    - name: COINBASE
+      config: coinbase/coinbase.cfg
+      secret: XXXX
+      passpharse:
+
+    - name: BITSTAMP
+      config: bitstamp/bitstamp.cfg
+      secret:
+      userName:
+      password:
