@@ -22,7 +22,7 @@ public class BitStampExchange implements IExchange {
             }
             logger.info("========  Loaded BitStamp  Config File  ==============");
             SessionSettings settings = new SessionSettings(inputStream);
-            Application application = new BitStampFixApp(settings);
+            Application application = new BitStampFixApp(exchangeProps);
             FileStoreFactory storeFactory = new FileStoreFactory(settings);
             SLF4JLogFactory logFactory = new SLF4JLogFactory(settings);
             socketInitiator = new SocketInitiator(application, storeFactory, settings,
