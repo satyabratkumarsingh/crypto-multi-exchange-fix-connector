@@ -24,7 +24,7 @@ public class CoinBaseExchange implements IExchange {
                 throw new IllegalArgumentException("FIX connection file not found for Coinbase !!");
             }
             SessionSettings settings = new SessionSettings(inputStream);
-            Application application = new CoinBaseFixApp();
+            Application application = new CoinBaseFixApp(exchangeProps);
             FileStoreFactory storeFactory = new FileStoreFactory(settings);
             SLF4JLogFactory logFactory = new SLF4JLogFactory(settings);
             socketInitiator = new SocketInitiator(application, storeFactory, settings,
